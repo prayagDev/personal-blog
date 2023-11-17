@@ -1,0 +1,26 @@
+step1: creating a project named personal_blog
+step2: creating an app named blog_post
+step3: creating a database named personal_blog_db, a user named ****** identified by ***** who grant all privileges for this database.
+step4: when user visit my website, a home page should display in which there is navbar, then main content(in which there will be recent posts with pagination) and aside tab(categories on which, when user will click then a page will be display specific for such category recent posts)
+step5: creating a slug field by which we create urls to particular post uniquely.
+step6: in the navbar, there will be a search bar for searching in post title, content and category and then showing fetched results.
+step7: authentication
+step8: now user should have a profile picture , and other information like first_name and last_name etc ..
+step9: everything should be render on profile page and ability to edit the profile information in this page.
+problem in step9: User model fields are done but UserProfile field how to do? created separately two forms .
+step10: user should have a link for writing the blogs, read their own blogs particularly, update and delete them too.
+step11: user can be able to comment on post, but only authenticated users.
+step12: user can be able to delete, update thier existing comment.
+step13: unauthenticated can see only the comment of other people.
+step14: code revise and optimization
+step15: upload in github(private or public) ?? - pending
+
+step16: creating rest api for this project; include several rest api features here.
+
+step17: deploy project ..
+{
+    
+}
+
+
+

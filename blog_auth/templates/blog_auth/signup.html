@@ -1,0 +1,15 @@
+{% extends "blog_post/parent.html" %}
+{% block title %}User SignUp{% endblock title %}
+{% block main %}
+<div class="container my-5">
+    <h3>Signup Form</h3>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        {{field.label_tag}}{{field}}{{field.errors}}<br>
+        {% endfor %}
+        <input type="submit" value="Submit" class="btn btn-warning w-25 text-center">
+    </form><br><br>
+    <a href="{% url "login" %}">Click Here to Login!</a>
+</div>
+{% endblock main %}

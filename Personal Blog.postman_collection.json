@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "dfdb0990-1456-4aed-9fde-8a1f40c1467a",
+		"name": "Personal Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31104796"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"stevan\",\r\n    \"email\":\"stevanjohn897@gmail.com\",\r\n    \"password1\":\"stevan\",\r\n    \"password2\":\"stevan\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTQ1ODk5LCJpYXQiOjE2OTk3NzMwOTksImp0aSI6ImJiNTQ0ODZhYzNiZDRlMmFhZTYxMzA3ZTQxZDE3OGEwIiwidXNlcl9pZCI6MjZ9.98zPsex9RXScD5yeprsiPHledF__Yr3Fy47yyaHWfKA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTQ1ODk5LCJpYXQiOjE2OTk3NzMwOTksImp0aSI6ImJiNTQ0ODZhYzNiZDRlMmFhZTYxMzA3ZTQxZDE3OGEwIiwidXNlcl9pZCI6MjZ9.98zPsex9RXScD5yeprsiPHledF__Yr3Fy47yyaHWfKA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "steve",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "idk@g.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/download.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTQ1ODk5LCJpYXQiOjE2OTk3NzMwOTksImp0aSI6ImJiNTQ0ODZhYzNiZDRlMmFhZTYxMzA3ZTQxZDE3OGEwIiwidXNlcl9pZCI6MjZ9.98zPsex9RXScD5yeprsiPHledF__Yr3Fy47yyaHWfKA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\":\"steve\",\r\n    \"new_password\":\"stevan\",\r\n    \"new_password_confirmation\":\"stevan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/change-password/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"stevanjohn897@gmail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/user/reset-password/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"user",
+								"reset-password",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Category List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTQ5NTE3LCJpYXQiOjE2OTk3NzY3MTcsImp0aSI6IjMyNjYxYTE2Y2VjNjQ4MmE5NDhlODMzNDc3MWYzNGQwIiwidXNlcl9pZCI6MjZ9.uM3qqqd5rnm9BBWCt4u4CU3LH66cZ_mGVmLF5CULdJg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"new year2\",\r\n    \"content\":\"this is new year post 2!!\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTU2MDYwLCJpYXQiOjE2OTk3ODMyNjAsImp0aSI6IjJkMDQyMjgwMGI2ZTQ3NmI4ZDFhYmM0MTU4NmE1MzYzIiwidXNlcl9pZCI6MX0.u5FzOSt7Mh4dTj3cDu1GhfnJqp1qx8sOYol2YEjDscw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"category\":\"Holi| Holi 2023\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/posts/new-year2-1699783140yGJ/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"posts",
+								"new-year2-1699783140yGJ",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTU3NTQ2LCJpYXQiOjE2OTk3ODQ3NDYsImp0aSI6IjRiMGEyMTFmNDY1YTRhMzNiYTI5MjNlZjhkNmJlNjQ5IiwidXNlcl9pZCI6MjZ9.PBzEQxIF70fKI1Aau0hJiHTelmw3EzEOYHZe2ydyvzc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/posts/new-year2-1699783140yGJ/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"posts",
+								"new-year2-1699783140yGJ",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/post-comments/new-year-1699778839koX/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"post-comments",
+								"new-year-1699778839koX",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTU3NTQ2LCJpYXQiOjE2OTk3ODQ3NDYsImp0aSI6IjRiMGEyMTFmNDY1YTRhMzNiYTI5MjNlZjhkNmJlNjQ5IiwidXNlcl9pZCI6MjZ9.PBzEQxIF70fKI1Aau0hJiHTelmw3EzEOYHZe2ydyvzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"comment by stevan\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/post-comments/new-year-1699778839koX/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"post-comments",
+								"new-year-1699778839koX",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTU3NTQ2LCJpYXQiOjE2OTk3ODQ3NDYsImp0aSI6IjRiMGEyMTFmNDY1YTRhMzNiYTI5MjNlZjhkNmJlNjQ5IiwidXNlcl9pZCI6MjZ9.PBzEQxIF70fKI1Aau0hJiHTelmw3EzEOYHZe2ydyvzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"idk\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/post-comments/new-year-1699778839koX/18/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"post-comments",
+								"new-year-1699778839koX",
+								"18",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5OTU3NTQ2LCJpYXQiOjE2OTk3ODQ3NDYsImp0aSI6IjRiMGEyMTFmNDY1YTRhMzNiYTI5MjNlZjhkNmJlNjQ5IiwidXNlcl9pZCI6MjZ9.PBzEQxIF70fKI1Aau0hJiHTelmw3EzEOYHZe2ydyvzc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/blog_api/post-comments/new-year-1699778839koX/18/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blog_api",
+								"post-comments",
+								"new-year-1699778839koX",
+								"18",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

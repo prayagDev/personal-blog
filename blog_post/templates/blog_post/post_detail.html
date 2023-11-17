@@ -1,0 +1,47 @@
+{% extends "blog_post/parent.html" %}
+{% block title %}Post Details{% endblock title %}
+{% block main %}
+
+<div class="container m-5">
+<div class="row">
+    <div class="col-lg-10">
+        <h1>Title: {{my_post.title}}</h1>
+        <div class="col">
+            <h5>Category: {{my_post.category}}</h5>
+            <hr>
+            <p>{{my_post.content}}</p>
+        </div>
+        {% if request.user.is_authenticated %}
+        <hr>
+        <div class="col">
+            <h5>Add a Comment</h5>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% for field in form %}
+                {{field.label_tag}}{{field}}{{field.errors}}
+                {% endfor %}<br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        {% endif %}
+        <hr>
+        <div class="col">
+            <h6>Comments:</h6>
+            <ul>
+                {% for comment in my_post.comments.all %}
+                    <li>
+                        <strong>{{ comment.author.username }}</strong> said:
+                        {{ comment.content }}
+                        {% if request.user.is_authenticated and request.user == comment.author %}
+                            <a href="{% url "update_comment" comment.id %}">Edit</a>
+                            <a href="{% url "delete_comment" comment.id %}">Delete</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock main %}

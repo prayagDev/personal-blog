@@ -1,0 +1,27 @@
+{% extends "blog_post/parent.html" %}
+{% block title %}User Specific Post Lists{% endblock title %}
+{% block main %}
+
+<div class="container m-5">
+    <table class="table" border="2">
+        <tr>
+            <th>S.No.</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th colspan="2">Action</th>
+        </tr>
+        {% for item in object_list %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.category}}</td>
+            <td><a href="{% url "post_detail" item.slug %}">Read More..</a></td>
+            <td><a href="{% url "update_post" item.slug %}">Update</a></td>
+            <td><a href="{% url "delete_post" item.slug %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock main %}

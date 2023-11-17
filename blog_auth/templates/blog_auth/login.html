@@ -1,0 +1,21 @@
+{% extends "blog_post/parent.html" %}
+{% block title %}User Login{% endblock title %}
+{% block main %}
+<div class="container my-5">
+    {% if messages %}
+    {% for message in messages %}
+    <h4 class="text-center text-{% if message.tags %}{{ message.tags }}{% endif %}">{{message}}</h4>
+    {% endfor %}
+    {% endif %}
+    <h3>Login Form</h3>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{form.non_field_errors}}
+        {% for field in form %}
+        {{field.label_tag}}{{field}}{{field.errors}}<br>
+        {% endfor %}
+        <input type="submit" value="Submit" class="btn btn-warning w-25 text-center">
+    </form><br><br>
+    <a href="{% url "user_signup" %}">Click Here to Signup!</a>
+</div>
+{% endblock main %}
