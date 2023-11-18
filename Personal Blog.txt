@@ -13,14 +13,8 @@ step11: user can be able to comment on post, but only authenticated users.
 step12: user can be able to delete, update thier existing comment.
 step13: unauthenticated can see only the comment of other people.
 step14: code revise and optimization
-step15: upload in github(private or public) ?? - pending
-
+step15: upload in github (public) 
 step16: creating rest api for this project; include several rest api features here.
-
-step17: deploy project ..
-{
-    
-}
 
 
 
